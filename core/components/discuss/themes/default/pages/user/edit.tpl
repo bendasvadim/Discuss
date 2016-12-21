@@ -78,7 +78,7 @@
             <br class="clearfix" />
             <label for="dis-show-email"><input type="checkbox" name="show_email" id="dis-show-email" value="1" [[+show_email]] />[[%discuss.show_email_public]]
                 <span class="error">
-                    [[+error.show_email]
+                    [[+error.show_email]]
                 </span>
             </label>
             <br class="clearfix" />
