@@ -41,7 +41,8 @@ class DiscussMessagesModifyController extends DiscussController {
 
         $this->discuss->setPageTitle($this->modx->lexicon('discuss.modify_post_header',array('title' => $this->post->get('title'))));
 
-        $this->thread = $this->modx->call('disThread', 'fetch', array(&$this->modx,$this->post->get('thread'),disThread::TYPE_MESSAGE));
+        $this->thread = $this->modx->call('disThread', 'fetch', array(&$this->modx,$this->post->get('thread'),'message'));
+        
         if (empty($this->thread)) $this->discuss->sendErrorPage();
         $this->modx->lexicon->load('discuss:post');
     }
